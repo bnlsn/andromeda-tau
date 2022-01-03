@@ -8,7 +8,7 @@ education:
   - course: B.A. in History, Classics
     institution: University of Notre Dame
     year: 2007
-email: ""
+email: "bryan@andromedatau.com"
 highlight_name: true
 interests:
 - Educational Research
@@ -17,7 +17,7 @@ interests:
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: 'mailto:bryan@andromedatau.com'
 - display:
     header: true
   icon: twitter
