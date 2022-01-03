@@ -34,10 +34,10 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/in/nelsonbryana/
 superuser: true
-title: Alice Bighetti (吳恩達)
+title: Bryan Nelson
 ---
 
-Alice Bighetti is a Project Coordinator at the EASEL Lab at Harvard Graduate School of Education.
+Bryan Nelson is a Project Coordinator at the EASEL Lab at Harvard Graduate School of Education.
 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/BryanNelsonResume.pdf" "newtab" >}}resumé{{< /staticref >}}.
