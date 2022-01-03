@@ -17,6 +17,7 @@ content:
   filters:
     folders:
       - publication
+      - journal-article
     tag: ''
     category: ''
     publication_type: ''
@@ -36,6 +37,3 @@ design:
   columns: '2'
 ---
 
-{{% callout note %}}
-Quickly discover relevant content by [filtering publications](./publication/).
-{{% /callout %}}

@@ -28,15 +28,15 @@ experience:
     company_logo:
     location: Cambirdge, MA
     date_start: '2015-05-25'
-    date_end: ''
+    date_end: 
     description: 
   - title: Project Manager
     company: Harvard University
-    company_url: ''
+    company_url: 
     company_logo:
     location: Cambridge, MA
     date_start: '2012-01-01'
-    date_end: '2014-5-31'
+    date_end: '2014-05-31'
     description: 
 
 design:
