@@ -18,15 +18,17 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:bryan@andromedatau.com'
-- display:
-    header: true
   icon: twitter
   icon_pack: fab
+  aria-label: 
   label: Follow me on Twitter
   link: https://twitter.com/brynlsn
 - icon: graduation-cap
   icon_pack: fas
   link: https://scholar.google.com/citations?user=RA1a2Z0AAAAJ
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-5646-092
 - icon: github
   icon_pack: fab
   link: https://github.com/brynlsn
@@ -37,7 +39,8 @@ superuser: true
 title: Bryan Nelson
 ---
 
-Bryan Nelson is a Project Coordinator at the EASEL Lab at Harvard Graduate School of Education.
+By day, I am a Project Coordinator at the EASEL Lab at the Harvard Graduate School of Education, where my research focuses on field-wide thinking about the organization, prioritization, and validation of social and emotional skills.
 
+By night, when I'm not chasing a 5-year-old around, I am a self-learner in all things data, science, and history. Or you might find me reading a battered copy of a science fiction book from the '60s or '70s.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/BryanNelsonResume.pdf" "newtab" >}}resumé{{< /staticref >}}.

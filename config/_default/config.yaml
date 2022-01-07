@@ -6,7 +6,7 @@ theme: "starter-hugo-academic"
 
 title: 'andromeda tau' # Website name
 baseurl: 'https://www.andromdedatau.com/' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+copyright: '[Accessibility Statement](/accessibility)' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE

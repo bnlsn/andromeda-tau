@@ -7,15 +7,15 @@ authors:
 - admin
 - Natasha Raisch
 - Emily Meland
-date: "2022-11-24T00:00:00Z"
-doi: ""
+date: "202-11-24T00:00:00Z"
+doi: "10.1007/978-3-030-85214-6_3"
 featured: false
 image:
 projects: []
-publication: '*DeJaeghere J., Murphy-Graham E. (eds) Life Skills Education for Youth. Young People and Learning Processes in School and Everyday Life, vol 5.*'
+publication: 'DeJaeghere J., Murphy-Graham E. (eds) *Life Skills Education for Youth. Young People and Learning Processes in School and Everyday Life*, vol 5'
 publication_short: ""
 publication_types:
-- "2"
+- "6"
 publishDate: "2017-01-01T00:00:00Z"
 slides:
 summary:

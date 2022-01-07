@@ -9,6 +9,8 @@ headless: true
 # Order that this section appears on the page.
 weight: 60
 
+active: false
+
 title: Recent Posts
 subtitle:
 
@@ -16,7 +18,8 @@ content:
   # Filter on criteria
   filters:
     folders:
-      - post
+      - reflection
+      - review
     tag: ''
     category: ''
     publication_type: ''
@@ -33,6 +36,6 @@ content:
 
 design:
   # Choose a view for the listings:
-  view: compact
+  view: Compact
   columns: '2'
 ---
