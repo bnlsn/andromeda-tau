@@ -13,6 +13,8 @@ weight: 20
 
 design:
   columns: '2'
+  spacing:
+    padding: ["25px", "0", "25px", "0"]
 
 author: bryan-home
 ---

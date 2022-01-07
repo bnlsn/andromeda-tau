@@ -18,9 +18,10 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:bryan@andromedatau.com'
+- display:
+    header: true
   icon: twitter
   icon_pack: fab
-  aria-label: 
   label: Follow me on Twitter
   link: https://twitter.com/brynlsn
 - icon: graduation-cap

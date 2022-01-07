@@ -13,7 +13,7 @@ weight: 15
 
 design:
   spacing:
-    padding: ["0", "0", "0", "0"]
+    padding: ["0", "0", "5px", "0"]
 ---
 
 <img align="left" width="150" height="150" src="/home/intro_files/andromeda-constellation.svg" alt="Andromeda constellation" hspace=20 vspace=20>

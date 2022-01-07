@@ -6,9 +6,7 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:bryan@andromedatau.com'
-- display:
-    header: true
-  icon: twitter
+- icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
   link: https://twitter.com/brynlsn
