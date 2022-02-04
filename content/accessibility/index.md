@@ -31,6 +31,18 @@ header:
 </ul>
 <h4>Additional accessibility considerations</h4>
 <p class="basic-information conformance-additions">Andromeda Tau is committed to making this website accessible to all. Every effort is made to be compliant with WCAG 2.1 standards. If this effort falls short, it is my commitment to address it in a timely manner.</p>
+<h3>Limitations and alternatives</h3>
+<p>
+	Despite our best efforts to ensure accessibility of
+	<span class="basic-information website-name">Andromeda Tau</span> , there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.
+</p>
+<p>
+	Known limitations for
+	<span class="basic-information website-name">Andromeda Tau</span>:
+</p>
+<ol class="technical-information accessibility-limitations">
+	<li><strong>R code chunks</strong>: R code chunks may contain text with low contrast because the code syntax coloring. We are examining ways to update syntax coloring and will try, to the best of our ability, to update the site accordingly . If you encounter contrast errors, switch to dark mode, where the text contrast meets the accessibility standard.</li>
+</ol>
 <h3>Feedback</h3>
 <p>
 	I welcome your feedback on the accessibility of
