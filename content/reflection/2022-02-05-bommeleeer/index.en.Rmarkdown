@@ -1,0 +1,136 @@
+---
+title: "Bommeleeër Affär"
+author: "Bryan Nelson"
+date: '2022-02-05'
+slug: bommeleeer-affar
+categories: []
+tags: Data Reflection
+subtitle: ''
+summary: Add summary here
+authors: []
+lastmod: '2022-02-05'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<p>Check out the final <a href="Bommeleeer-Affar.html" target="_blank">Bommeleeër Affär Dashboard</a>.</p>
+
+
+
+# Background
+
+
+
+# Data Collection
+
+
+
+# Setup
+
+
+
+```{r message=FALSE, warning=FALSE}
+# library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(leaflet)
+library(DT)
+library(timevis)
+library(crosstalk)
+library(widgetframe)
+library(htmlwidgets)
+```
+
+
+```{r message=FALSE, warning=FALSE}
+bomm <- read_csv("C:/Users/bryan/Dropbox/Computer/Andromeda-Tau/data-reflections/blog-data/bommeleeer-affar/data/bommeleeër-affär.csv")
+
+bomm$Date <- mdy(bomm$Date)
+```
+
+
+## Locations
+
+Shared data
+
+```{r}
+shared_bomm <- SharedData$new(bomm)
+```
+
+
+
+Custom icon
+
+```{r message=FALSE, warning=FALSE}
+expl_icon <- makeIcon(
+  iconUrl = "https://cdn-icons-png.flaticon.com/512/831/831687.png",
+  iconWidth = 24, iconHeight = 24)
+```
+
+
+Map
+
+```{r}
+bomm_map <- leaflet() %>%
+  addTiles(group = "Map") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") %>%
+  addMarkers(data = shared_bomm,
+             lng = ~longitude, lat = ~latitude,
+             popup = ~paste0("Target: ", Target, "<br/>Location: ", Location, "<br/>Date: ", Date, "<br/>", Notes),
+             label = ~Target,
+             icon = expl_icon) %>%
+  addLayersControl(baseGroups=c("Map", "Satellite"),
+                   options=layersControlOptions(collapsed=FALSE))
+
+frameWidget(bomm_map, width = "100%")
+```
+
+
+Table
+
+```{r message=FALSE, warning=FALSE}
+bomm_table <- shared_bomm %>%
+  datatable(rownames = FALSE)
+
+frameWidget(bomm_table, width = "100%")
+```
+
+
+
+
+Filter
+
+```{r}
+bomm_filter <- filter_slider("Date", "Date", shared_bomm, column = ~Date)
+bomm_filter
+```
+
+
+
+## Timeline
+
+```{r message=FALSE, warning=FALSE}
+bomm_time <- bomm %>%
+  mutate(start = Date) %>%
+  mutate(content = Target) %>%
+  timevis()
+
+frameWidget(bomm_time, width = "100%", height = 1000)
+```
+
+## Documents
+
+
+
+
+# Summary
+
+<iframe class="flexdashboard" src="Bommeleeer-Affar.html" style = "height: 1070px; width: 720px"> </iframe>
+
+## Future Explorations
+
+

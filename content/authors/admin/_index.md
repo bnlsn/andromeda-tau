@@ -40,8 +40,8 @@ superuser: true
 title: Bryan Nelson
 ---
 
-By day, I am a Project Coordinator at the EASEL Lab at the Harvard Graduate School of Education, where my research focuses on field-wide thinking about the organization, prioritization, and validation of social and emotional skills.
+By day, I am a Senior Project Coordinator at the EASEL Lab at the Harvard Graduate School of Education, where my research focuses on field-wide thinking about the organization, prioritization, and validation of social and emotional skills.
 
-By night, when I'm not chasing a 5-year-old around, I am a self-learner in all things data, science, and history. Or you might find me reading a battered copy of a science fiction book from the '60s or '70s.
+By night, when I'm not chasing a 7-year-old around, I am a self-learner in all things data, science, and history. Or you might find me reading a battered copy of a science fiction book from the '60s or '70s.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/BryanNelsonResume.pdf" "newtab" >}}resumé{{< /staticref >}}.

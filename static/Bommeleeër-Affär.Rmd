@@ -1,0 +1,149 @@
+---
+title: "Bommeleeër Affär"
+author: "Bryan Nelson"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+lang: "en-us"
+---
+
+<style>                     
+.navbar {
+  background-color:maroon;
+  color:white;
+}
+</style>  
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(leaflet)
+library(DT)
+library(timevis)
+library(crosstalk)
+library(timelineS)
+
+bomm <- read_csv("C:/Users/bryan/Dropbox/Computer/Andromeda-Tau/data-reflections/blog-data/bommeleeer-affar/data/bommeleeër-affär.csv")
+
+bomm$Date <- mdy(bomm$Date)
+```
+
+
+Locations {data-icon="ion-map"}
+========================================================
+
+Column {.sidebar data-width=200}
+-------------------------------------
+<br/>
+**Locations**
+
+The Bommeleeër Affär, or Bomber's Affair, was a series of bomb attacks in Luxembourg between 30 May 1984 and 25 May 1986.
+
+Some locations are approximate to the town or neighborhood of the attack.
+
+**References**
+
+[Bommeleeër News](https://www.rtl.lu/news/bommeleeer), RTL (Luxembourgish)
+
+[Das Bommeleeër-Dossier](https://www.wort.lu/de/view/das-bommeleeer-dossier-5092c3a9e4b0fe37043e8be8), Luxemburger Wort (German)
+
+DNA: Luxembourg Podcast: [Part One](https://today.rtl.lu/media/podcasts/a/1791097.html) and [Part Two](https://today.rtl.lu/media/podcasts/a/1791100.html), RTL (English)
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Map
+
+```{r}
+shared_bomm <- SharedData$new(bomm)
+```
+
+
+```{r}
+filter_slider("Date", "Date", shared_bomm, column = ~Date)
+
+expl_icon <- makeIcon(
+  iconUrl = "https://cdn-icons-png.flaticon.com/512/831/831687.png",
+  iconWidth = 24, iconHeight = 24)
+
+leaflet() %>% 
+  addTiles(group = "Map") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") %>%
+  addMarkers(data = shared_bomm,
+             lat = ~latitude, lng = ~longitude,
+             popup = ~paste0("Target: ", Target, "<br/>Location: ", Location, "<br/>Date: ", Date, "<br/>", Notes),
+             label = ~Target,
+             icon = expl_icon) %>%
+  addLayersControl(baseGroups=c("Map", "Satellite"),
+                   options=layersControlOptions(collapsed=FALSE))
+```
+
+Column {.tabset data-width=500}
+-----------------------------------------------------------------------
+
+### Table
+
+```{r}
+shared_bomm %>%
+  datatable(rownames = FALSE, options = list(paging = FALSE, scrollY = FALSE))
+```
+
+Timeline {data-icon="ion-clock"}
+========================================================
+
+Column {.sidebar data-width=200}
+-------------------------------------
+<br/>
+**Timeline**
+
+The Bommeleeër Affär, or Bomber's Affair, was a series of bomb attacks in Luxembourg between 30 May 1984 and 25 May 1986.
+
+**References**
+
+[Bommeleeër News](https://www.rtl.lu/news/bommeleeer), RTL (Luxembourgish)
+
+[Das Bommeleeër-Dossier](https://www.wort.lu/de/view/das-bommeleeer-dossier-5092c3a9e4b0fe37043e8be8), Luxemburger Wort (German)
+
+DNA: Luxembourg Podcast: [Part One](https://today.rtl.lu/media/podcasts/a/1791097.html) and [Part Two](https://today.rtl.lu/media/podcasts/a/1791100.html), RTL (English)
+
+Column {.tabset data-width=500}
+-----------------------------------------------------------------------
+
+### Timeline
+
+```{r}
+bomm %>%
+  mutate(start = Date) %>%
+  mutate(content = Target) %>%
+  timevis()
+```
+
+Documents {data-icon="ion-document"}
+========================================================
+
+Column {.sidebar data-width=200}
+-------------------------------------
+<br/>
+**Documents**
+
+Few primary documents are in English, but a few of these are of particular interest: the ransom letters, though the English is likely not of a native speaker, and a review by the CIA in 1986.
+
+**References**
+
+[Bommeleeër News](https://www.rtl.lu/news/bommeleeer), RTL (Luxembourgish)
+
+[Das Bommeleeër-Dossier](https://www.wort.lu/de/view/das-bommeleeer-dossier-5092c3a9e4b0fe37043e8be8), Luxemburger Wort (German)
+
+DNA: Luxembourg Podcast: [Part One](https://today.rtl.lu/media/podcasts/a/1791097.html) and [Part Two](https://today.rtl.lu/media/podcasts/a/1791100.html), RTL (English)
+
+Column {.tabset data-width=800}
+-----------------------------------------------------------------------
+
+### Bommeleeër Ransom Letters
+![Bommeleeër Ransom Letters](documents/Erpresser-Breiwer.pdf){height=800 width=800}
+
+### CIA Terrorism Review, 1986-02-10
+![CIA Terrorism Reivew, 1986-02-10](documents/CIA-Terrorism-Review-1986-02-10.pdf){height=800 width=800}
