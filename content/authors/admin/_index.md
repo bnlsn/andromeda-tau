@@ -20,19 +20,15 @@ social:
   link: 'mailto:bryan@andromedatau.com'
 - display:
     header: true
-  icon: twitter
-  icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/brynlsn
 - icon: graduation-cap
   icon_pack: fas
   link: https://scholar.google.com/citations?user=RA1a2Z0AAAAJ
 - icon: orcid
   icon_pack: fab
-  link: https://orcid.org/0000-0002-5646-092
+  link: https://orcid.org/0000-0002-5646-0925
 - icon: github
   icon_pack: fab
-  link: https://github.com/brynlsn
+  link: https://github.com/bnlsn
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/nelsonbryana/

@@ -24,13 +24,29 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Senior Project  Coordinator
+    company: Harvard Graduate School of Education
+    company_url: ''
+    company_logo:
+    location: Cambridge, MA
+    date_start: '2023-03-01'
+    date_end: 
+    description:
   - title: Project  Coordinator
     company: Harvard Graduate School of Education
     company_url: ''
     company_logo:
     location: Cambridge, MA
+    date_start: '2019-12-01'
+    date_end: '202303-01'
+    description:
+  - title: Research Assistant
+    company: Harvard Graduate School of Education
+    company_url: ''
+    company_logo:
+    location: Cambridge, MA
     date_start: '2015-05-25'
-    date_end: 
+    date_end: '2019-12-01
     description: 
   - title: Project Manager
     company: Harvard University
