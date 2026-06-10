@@ -50,7 +50,7 @@ experience:
     description: 
   - title: Project Manager
     company: Harvard University
-    company_url: 
+    company_url:  ''
     company_logo:
     location: Cambridge, MA
     date_start: '2012-01-01'
