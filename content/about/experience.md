@@ -46,7 +46,7 @@ experience:
     company_logo:
     location: Cambridge, MA
     date_start: '2015-05-25'
-    date_end: '2019-12-01
+    date_end: '2019-12-01'
     description: 
   - title: Project Manager
     company: Harvard University
