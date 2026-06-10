@@ -38,7 +38,7 @@ experience:
     company_logo:
     location: Cambridge, MA
     date_start: '2019-12-01'
-    date_end: '202303-01'
+    date_end: '2023-03-01'
     description:
   - title: Research Assistant
     company: Harvard Graduate School of Education
